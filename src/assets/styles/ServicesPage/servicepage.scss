@@ -1,0 +1,56 @@
+@import url('../colors.scss');
+
+.our-service-header {
+    .nav-link {
+        color: $color_p;
+
+        &.active::before {
+            left: 7%;
+        }
+    }
+}
+
+.our-services {
+    .title {
+        margin: 11px 0 15px 0;
+        text-align: center;
+    }
+
+    .subtitle {
+        max-width: 740px;
+        margin: 0 auto;
+    }
+
+    .text-box {
+        #more {
+            display: none;
+        }
+
+        .title{
+            text-align: left;
+        }
+
+        .read-next button {
+            color: $color_btn;
+            background-color: rgba(255, 255, 255, 0);
+            border-style: none;
+            position: relative;
+            margin-top: 20px;
+
+            &::before {
+                content: "";
+                width: 81px;
+                height: 1px;
+                background-color: $color_btn_read;
+                position: absolute;
+                top: 112%;
+                left: 0%;
+            }
+        
+        }
+    }
+}
+
+
+
+

@@ -1,0 +1,43 @@
+@import url("../colors.scss");
+
+
+.our-service-header .nav-link{
+  color:#77789E;
+}
+.our-service-header .nav-link.active::before {
+  left: 7%;
+}
+
+
+.our-services .title {
+  margin: 11px 0 15px 0;
+  text-align: center;
+}
+.our-services .subtitle {
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+.our-services .text-box #more {
+  display: none;
+}
+.our-services .text-box .title{
+  text-align: left;
+}
+.our-services .text-box .read-next button {
+  color:#0051F9;
+  background-color: rgba(255, 255, 255, 0);
+  border-style: none;
+  position: relative;
+  margin-top: 20px;
+}
+.our-services .text-box .read-next button::before {
+  content: "";
+  width: 81px;
+  height: 1px;
+  position: absolute;
+  background-color: #5BECCC;
+  top: 112%;
+  left: 0%;
+
+}/*# sourceMappingURL=servicepage.css.map */

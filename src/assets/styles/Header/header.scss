@@ -1,0 +1,74 @@
+@import url('../colors.scss');
+
+
+
+.logo {
+    padding-right: 45px;
+}
+
+.navbar {
+    padding-top: 25px;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        left: 0%;
+        right: 0%;
+        top: 122%;
+        opacity: 0.1;
+        height: 1px;
+        background-color: $color_white;
+
+    }
+}
+.header__link {
+    &.default-color {
+      color: $color_black;
+    }
+  
+    &.white-color {
+      color: $color_white;
+    }
+}
+.nav-link {
+    position: relative;
+    margin-right: 40px;
+    font-size: 14px;
+    &.default-color {
+        color: $color_black;
+      }
+    
+      &.white-color {
+        color: $color_white;
+      }
+
+    &.active::before {
+        content: '';
+        position: absolute;
+        width: 58px;
+        left: 0%;
+        right: 0%;
+        top: 186%;
+        height: 1px;
+        background-color: $color_btn;
+    }
+}
+
+.dropdown-toggle::after {
+    color: $color_btn !important;
+}
+
+
+.btn {
+    height: 50px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    padding: 17px 30px;
+    color: $color_white;
+    background: $color_btn;
+}

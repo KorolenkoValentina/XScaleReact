@@ -1,0 +1,84 @@
+
+.nav-link {
+  
+  color: #FFFFFF;
+  
+}
+.container {
+  width: 100%;
+  max-width: 1316px;
+  margin: 0 auto;
+}
+
+.baner {
+  width: 100%;
+  background: url(../../images/mainpage/baner.jpg) center/cover no-repeat;
+  margin: 0 auto;
+  min-height: 760px;
+}
+
+.baner-content {
+  max-width: 546px;
+  padding-top: 215px;
+}
+.baner-content .title {
+  color: #FFFFFF;
+  margin-bottom: 15px;
+}
+.baner-content .subtitle {
+  color: #FFFFFF;
+}
+
+.main__subtitle {
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #77789E;
+  margin-top: 35px;
+}
+.main__subtitle span {
+  opacity: 0.8;
+}
+
+.main-part {
+  margin: 120px 0 140px;
+  flex-direction: column;
+}
+.main-part .content {
+  margin-bottom: 100px;
+}
+.main-part .content-secondary {
+  margin-bottom: 100px;
+}
+.main-part .text-box {
+  max-width: 488px;
+  width: 100%;
+}
+.main-part .img-box {
+  box-shadow: 25px 35px 60px rgba(0, 4, 94, 0.06);
+}
+
+.secondary-part {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin: 70px 0;
+}
+.secondary-part .title {
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 150%;
+}
+.secondary-part::before {
+  content: "";
+  position: absolute;
+  width: 1316px;
+  left: 0%;
+  right: 0%;
+  top: -70%;
+  bottom: 100%;
+  opacity: 0.1;
+  height: 1px;
+  background-color: #353760;
+}/*# sourceMappingURL=homepage.css.map */

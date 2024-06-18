@@ -1,0 +1,55 @@
+@import url('../colors.scss');
+
+.about-us {
+    .title {
+        margin: 11px 0 65px 0;
+        text-align: center;
+    }
+}
+
+.about-us__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .subtitle {
+        color: $color_black;
+        max-width: 478px;
+        font-size: 16px;
+        opacity: 1;
+    }
+}
+
+.examples {
+    display: flex;
+    justify-content: space-between;
+    margin: 100px 0 160px;
+    align-items: center;
+
+    .subtitle {
+        text-align: center;
+        margin-top: 35px;
+        max-width: 345px;
+        font-size: 14px;
+    }
+}
+
+.example {
+    background: $color_white;
+    border: 2px solid rgba(0, 81, 249, 0.06);
+    box-shadow: 6px 18px 30px rgba(215, 216, 249, 0.2);
+    border-radius: 14px;
+    width: 420px;
+    height: 300px;
+    background: url(../../images/about/international.svg) no-repeat center top;
+    padding: 55px 30px 0;
+    
+}
+
+.example-transportation {
+    background: url(../../images/about/transportation.svg) no-repeat center top;
+}
+
+.example-service {
+    background: url(../../images/about/service.svg) no-repeat center top;
+}

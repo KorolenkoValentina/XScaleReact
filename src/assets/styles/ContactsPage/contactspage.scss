@@ -1,0 +1,54 @@
+@import url('../colors.scss');
+
+.contact-us  {
+    .title {
+        margin: 11px 0 50px 0;
+        text-align: center;
+    }
+
+}
+
+
+.contacts {
+    display: flex;
+    justify-content: space-evenly;
+    cursor: pointer;
+    margin-bottom: 295px;
+
+    .subtitle:hover {
+        color: $color_btn;
+    }
+    h5 {
+        font-weight: 500;
+        font-size: 18px;
+        color: $color_black;
+        padding-left: 18px;
+    }
+
+    span {
+        color: $color_black;
+
+        &:hover {
+            color: $color_btn;
+        }
+    }
+}
+.contact {
+
+    background: url(../../images/contacts/phone.svg) no-repeat top left;
+
+}
+
+.contact-email {
+    background: url(../../images/contacts/email.svg) no-repeat top left;
+}
+
+.contact-addr {
+    background: url(../../images/contacts/address.svg) no-repeat top left;
+
+    .subtitle {
+        border: 1px solid $color_p;
+        padding: 13px 16px;
+        border-radius: 4px;
+    }
+}
