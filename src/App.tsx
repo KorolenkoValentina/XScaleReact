@@ -5,18 +5,18 @@ import HomePage from './pages/HomePage';
 import AboutUsPage from './pages/AboutUsPage';
 import OurServicesPage from './pages/ServicesPage';
 import ContactsPage from './pages/ContactsPages';
-import Header from './components/Header';
+import SignUp from './pages/SignUpPages/SignUpPage';
 import './App.css'
 
 
 function App() {
 return (
 
-  <div className="App">
+  <div>
     <main>
 
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/home" element={<HomePage />} />
         <Route path="/about" element={<AboutUsPage />} />
         <Route path="/services" element={<OurServicesPage />} />
         <Route path="/contacts" element={<ContactsPage
@@ -27,7 +27,7 @@ return (
         addressLondon="Suite 5, 10 Churchill Square, West Malling Kent ME19 4YU"
         addressSingapore="20 Collyer Quay, #09-01, Singapore 049319"
         addressTashkent="5A Shahrisabz-Tor Street, Tashkent 100060 Uzbekistan"/>} />
-
+        <Route path="/" element={<SignUp />} />
 
       </Routes>
 

@@ -22,7 +22,7 @@ const Header: React.FC<HeaderProps> = ({ linkColor = 'default-color' }) => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link as={NavLink} to="/" className={`header__link ${linkColor}`}>Home</Nav.Link>
+              <Nav.Link as={NavLink} to="/home" className={`header__link ${linkColor}`}>Home</Nav.Link>
               <Nav.Link as={NavLink} to="/about" className={`header__link ${linkColor}`}>About</Nav.Link>
               <NavDropdown className={linkColor} title="Services" id="basic-nav-dropdown">
                 <NavDropdown.Item as={NavLink} to="/services" >Logistics IT Platform</NavDropdown.Item>
