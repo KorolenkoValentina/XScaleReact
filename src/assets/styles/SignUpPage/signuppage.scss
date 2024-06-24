@@ -1,15 +1,29 @@
 @import url('../colors.scss');
 
-// .btn{
-//     padding: 17px 30px;
-// }
+.navbar {
+    padding-top: 25px;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        left: 0%;
+        right: 0%;
+        top: 122%;
+        opacity: 0.1;
+        height: 1px;
+        background-color: #a19c9c;
+
+    }
+}
 .form-container {
     max-width: 500px;
     margin: 100px auto;
     padding: 40px;
     border: 1px solid #ccc;
     border-radius: 10px;
-    // background-color: $color_white;
+    background-color: #FFFF;
   }
   .name-container{
     display: flex;
@@ -57,7 +71,7 @@
     border: none;
     border-radius: 5px;
     background-color: #007bff;
-    // color: $color_white;
+    color: #FFFF;
     cursor: pointer;
   
     &:hover {

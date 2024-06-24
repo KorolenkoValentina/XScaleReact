@@ -4,14 +4,27 @@ import StepProgress from './StepProgress';
 import Header from './Header';
 
 interface Step3Props {
-prevStep: () => void;
-submitForm: () => void;
+  prevStep: () => void;
+  submitForm: (email: string, password: string) => void;
+  handleInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  formData: any;
 }
 
-const Step3: React.FC<Step3Props> = ({ prevStep, submitForm }) => {
+
+
+const Step3: React.FC<Step3Props> = ({prevStep, submitForm, handleInputChange, formData }) => {
+ 
+  const handleSubmit = () => {
+    submitForm(formData.email, formData.password);
+  };
   return (
   <>
-    <Header />
+     <Header 
+        linkText="Already have an account?" 
+        buttonText="Log in" 
+        linkTo="/login" 
+        buttonTo="/login"
+      />
     <div className="form-container">
       <h2>Sign Up</h2>
       <p>Step 3. Submit profile data</p>
@@ -19,28 +32,39 @@ const Step3: React.FC<Step3Props> = ({ prevStep, submitForm }) => {
       <div className="name-container">
         <div>
           <label>Name of the company*</label>
-          <input type="text" required />
+          <input type="text" required 
+          name="companyName"
+          value={formData.companyName}
+          onChange={handleInputChange}/>
         </div>
         <div>
           <label>Nature of the business*</label>
-          <input type="text" required />
+          <input type="text" required 
+          name="businessNature"
+           value={formData.businessNature} onChange={handleInputChange}/>
         </div>
       </div>
       <div>
         <label>Additional phone number</label>
-        <input type="text" />
+        <input type="text" 
+        name="additionalPhone"
+        value={formData.additionalPhone} onChange={handleInputChange}/>
       </div>
       <div>
         <label>Company jurisdiction*</label>
-        <input type="text" required />
+        <input type="text" required 
+        name="jurisdiction"
+        value={formData.jurisdiction} onChange={handleInputChange}/>
       </div>
       <div>
         <label>Registration numbers</label>
-        <input type="text" />
+        <input type="text" 
+        name="registrationNumber"
+        value={formData.registrationNumber} onChange={handleInputChange}/>
       </div>
       <div className='btn-container'>
       <button className='btn-back' onClick={prevStep}>Back</button>
-      <button onClick={submitForm}>Create Account</button>
+      <button onClick={handleSubmit}>Create Account</button>
       </div>
     </div>
   </>

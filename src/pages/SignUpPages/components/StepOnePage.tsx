@@ -4,13 +4,24 @@ import StepProgress from './StepProgress';
 import Header from './Header';
 
 interface Step1Props {
-nextStep: () => void;
+  nextStep: () => void;
+  handleInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  formData: any;
 }
 
-const Step1: React.FC<Step1Props> = ({ nextStep }) => {
+const Step1: React.FC<Step1Props> = ({ nextStep, handleInputChange, formData  }) => {
+  // const[name, setName]= useState('')
+  // const[lastName, setLastName]= useState('')
+  // const[number, setNumber]= useState('')
+  // const[email, setEmail]= useState('')
   return (
   <>
-    <Header />
+     <Header 
+        linkText="Already have an account?" 
+        buttonText="Log in" 
+        linkTo="/login" 
+        buttonTo="/login"
+      />
     <div className="form-container">
       <h2>Sign Up</h2>
       <p>Step 1. Start sign up</p>
@@ -18,20 +29,28 @@ const Step1: React.FC<Step1Props> = ({ nextStep }) => {
       <div className="name-container">
         <div>
           <label>First Name*</label>
-          <input type="text" required />
+          <input type="text" required 
+          name="firstName" 
+          value={formData.firstName} onChange={handleInputChange}/>
         </div>
         <div>
           <label>Last Name*</label>
-          <input type="text" required />
+          <input type="text" required 
+           name="lastName"
+          value={formData.lastName} onChange={handleInputChange}/>
         </div>
       </div>
       <div>
         <label>Phone number*</label>
-        <input type="text" required />
+        <input type="text" required 
+        name="phoneNumber" 
+        value={formData.phoneNumber} onChange={handleInputChange}/>
       </div>
       <div>
         <label>Email*</label>
-        <input type="email" required />
+        <input type="email" required 
+         name="email"
+         value={formData.email} onChange={handleInputChange}/>
       </div>
 
       <div className='checkbox-container'>

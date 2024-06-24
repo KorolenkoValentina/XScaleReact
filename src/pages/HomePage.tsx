@@ -1,4 +1,8 @@
 import React from 'react';
+import { Navigate } from 'react-router-dom';
+import { useAuth } from '../hooks/user-auth';
+import { useAppDispatch } from '../hooks/redux-hooks';
+import { removeUser } from '../store/slices/userSlice';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import '../assets/styles/HomePage/homepage.css'
@@ -7,8 +11,11 @@ import ImageSecond from '../assets/images/mainpage/img-second.jpg';
 import ImageThird from '../assets/images/mainpage/img-third.jpg';
 
 
+
 function HomePage() {
-return (
+  const dispatch = useAppDispatch()
+  const {isAuth, email} = useAuth()
+return isAuth ? (
 <>
   <section className="baner">
   <Header linkColor="white-color" />
@@ -69,12 +76,15 @@ return (
           <div className="title">Ready To Get Started? </div>
           <p className="subtitle">Start using the XScale platform. Sign up and send your first a request.</p>
         </div>
-        <button className="btn">Go to the app</button>
+        {/* <button className="btn">Go to the app</button> */}
+        <button className="btn" onClick={()=>dispatch(removeUser())}>Log out{email}</button>
       </div>
     </div>
   </section>
   <Footer />
 </>
+):(
+  < Navigate  to='/login'/>
 );
 }
 
