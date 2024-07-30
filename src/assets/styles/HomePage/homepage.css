@@ -1,9 +1,9 @@
-
 .nav-link {
-  
+
   color: #FFFFFF;
-  
+
 }
+
 .container {
   width: 100%;
   max-width: 1316px;
@@ -21,10 +21,12 @@
   max-width: 546px;
   padding-top: 215px;
 }
+
 .baner-content .title {
   color: #FFFFFF;
   margin-bottom: 15px;
 }
+
 .baner-content .subtitle {
   color: #FFFFFF;
 }
@@ -37,6 +39,7 @@
   color: #77789E;
   margin-top: 35px;
 }
+
 .main__subtitle span {
   opacity: 0.8;
 }
@@ -45,16 +48,20 @@
   margin: 120px 0 140px;
   flex-direction: column;
 }
+
 .main-part .content {
   margin-bottom: 100px;
 }
+
 .main-part .content-secondary {
   margin-bottom: 100px;
 }
+
 .main-part .text-box {
   max-width: 488px;
   width: 100%;
 }
+
 .main-part .img-box {
   box-shadow: 25px 35px 60px rgba(0, 4, 94, 0.06);
 }
@@ -65,15 +72,17 @@
   justify-content: space-between;
   margin: 70px 0;
 }
+
 .secondary-part .title {
   font-weight: 300;
   font-size: 36px;
   line-height: 150%;
 }
+
 .secondary-part::before {
   content: "";
   position: absolute;
-  width: 1316px;
+  width: 100%;
   left: 0%;
   right: 0%;
   top: -70%;
@@ -81,4 +90,53 @@
   opacity: 0.1;
   height: 1px;
   background-color: #353760;
-}/*# sourceMappingURL=homepage.css.map */
+}
+
+@media screen and (max-width:768px) {
+
+  .baner-content {
+
+    padding-top: 120px;
+  }
+
+  .main-part {
+    margin: 0 0 60px 0;
+  }
+
+  .main-part .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    margin-bottom: 0;
+  }
+
+  .main-part .img-box {
+    width: 100%;
+    margin: 50px 0 20px;
+  }
+
+  .main-part .content-secondary {
+    margin-bottom: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+
+  }
+
+  .secondary-part {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: 30px 0;
+  }
+
+  .secondary-part::before {
+    top: -10%;
+  }
+
+}
+
+/*# sourceMappingURL=homepage.css.map */

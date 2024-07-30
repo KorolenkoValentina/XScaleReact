@@ -40,4 +40,24 @@
   top: 112%;
   left: 0%;
 
-}/*# sourceMappingURL=servicepage.css.map */
+}
+@media screen and (max-width:768px) {
+  .our-services .text-box .title {
+    text-align: center;
+}
+.our-services .subtitle {
+
+  text-align: justify
+}
+.our-services .text-box .read-next button {
+  margin: 15px 0 44px;
+}
+.our-services .text-box .read-next button::before {
+  
+  left: 16%;
+}
+ 
+
+} 
+
+/*# sourceMappingURL=servicepage.css.map */

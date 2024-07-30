@@ -45,4 +45,40 @@
   border: 1px solid #77789E;
   padding: 13px 16px;
   border-radius: 4px;
-}/*# sourceMappingURL=contactspage.css.map */
+}
+@media screen and (max-width:768px) {
+  .contacts {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin:0 0 52px 8px;
+    
+  }
+
+  .contacts h5 {
+    padding-left: 20px;
+  }
+  .contact-mobile span {
+    color: #0051F9;
+  }
+  .contact-mobile  .subtitle {
+   
+    text-align: left;
+  }
+  .contact-email .subtitle {
+    color: #0051F9;
+    text-align: left;
+  }
+ 
+  .contact-addr .subtitle {
+    border: none;
+    padding: 0;
+    border-radius: none;
+    text-align: left;
+  }
+ 
+
+} 
+
+/*# sourceMappingURL=contactspage.css.map */

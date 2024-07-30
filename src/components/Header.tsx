@@ -1,20 +1,24 @@
 import React from 'react';
 import '../assets/styles/Header/header.css'
 import { Container, Navbar, Nav, NavDropdown } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom'; 
+import { NavLink, useLocation } from 'react-router-dom'; 
 import logo from '../assets/images/about/Logo.svg'; 
+import logoLight from '../assets/images/mainpage/Logo.svg'
 
 interface HeaderProps {
   linkColor?: string; 
 } 
 const Header: React.FC<HeaderProps> = ({ linkColor = 'default-color' }) => {
+  const location = useLocation();
+  
+  const currentLogo = location.pathname === '/' ? logoLight : logo;
   return (
     <header>
       <Navbar expand="lg">
         <Container>
           <Navbar.Brand href="#">
             <img
-              src={logo}
+               src={currentLogo}
               className="img-fluid"
               alt="logo"
             />
@@ -24,7 +28,7 @@ const Header: React.FC<HeaderProps> = ({ linkColor = 'default-color' }) => {
             <Nav className="me-auto">
               <Nav.Link as={NavLink} to="/" className={`header__link ${linkColor}`}>Home</Nav.Link>
               <Nav.Link as={NavLink} to="/about" className={`header__link ${linkColor}`}>About</Nav.Link>
-              <NavDropdown className={linkColor} title="Services" id="basic-nav-dropdown">
+              <NavDropdown className={`header__link ${linkColor}`} title="Services" id="basic-nav-dropdown">
                 <NavDropdown.Item as={NavLink} to="/services" >Logistics IT Platform</NavDropdown.Item>
                 <NavDropdown.Item href="#">Airfreight services</NavDropdown.Item>
                 <NavDropdown.Item href="#">Trucking / Haulage</NavDropdown.Item>

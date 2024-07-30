@@ -7,7 +7,7 @@ import '../assets/styles/AboutUsPage/aboutuspage.css'
 function AboutUsPage() {
 return (
 <>
-    <Header />
+    <Header linkColor="default-color"/>
     <section className="about-us">
         <div className="container">
             <p className="main__subtitle">

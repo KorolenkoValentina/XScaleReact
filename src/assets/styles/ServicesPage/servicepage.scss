@@ -51,6 +51,30 @@
     }
 }
 
+@media screen and (max-width: 768px) {
+    .our-services {
+      .text-box {
+        .title {
+          text-align: center;
+        }
+        
+        .subtitle {
+          text-align: justify;
+        }
+  
+        .read-next {
+          button {
+            margin: 15px 0 44px;
+  
+            &::before {
+              left: 16%;
+            }
+          }
+        }
+      }
+    }
+  }
+  
 
 
 

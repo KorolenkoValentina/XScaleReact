@@ -53,3 +53,29 @@
 .example-service {
     background: url(../../images/about/service.svg) no-repeat center top;
 }
+
+@media screen and (max-width:768px) {
+    .about-us {
+        .title {
+            margin-bottom: 19px;
+        }
+    }
+
+    .about-us__item {
+        flex-direction: column;
+    }
+
+    .about-us-text {
+        margin-top: 20px;
+    }
+
+    .examples {
+        flex-direction: column;
+        margin: 52px 0 0;
+    }
+
+    .example {
+        box-shadow: none;
+        border: none;
+    }
+}

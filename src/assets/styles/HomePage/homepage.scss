@@ -76,7 +76,7 @@
     &::before {
         content: '';
         position: absolute;
-        width: 1316px;
+        width: 100%;
         left: 0%;
         right: 0%;
         top: -70%;
@@ -88,3 +88,38 @@
     }
 
 }
+
+@media screen and (max-width: 768px) {
+
+    .baner-content {
+      padding-top: 120px;
+    }
+  
+    .main-part {
+      margin: 0 0 60px;
+  
+      .content {
+        flex-direction: column-reverse;
+            margin-bottom: 0;
+      }
+  
+      .img-box {
+        width: 100%;
+        margin: 50px 0 20px;
+      }
+  
+      .content-secondary {
+        margin-bottom: 0;
+        flex-direction: column;
+      }
+    }
+  
+    .secondary-part {
+        flex-direction: column;
+      margin: 30px 0;
+  
+      &::before {
+        top: -10%;
+      }
+    }
+  }

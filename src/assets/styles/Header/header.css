@@ -31,7 +31,7 @@
 } */
 
 .header__link.default-color {
-  color:#353760 ;
+  color:#353760 !important;
 }
 
 .header__link.white-color {
@@ -52,6 +52,7 @@
   color: #0051F9 !important;
 }
 
+
 .btn {
   height: 50px;
   font-weight: 500;
@@ -62,4 +63,26 @@
   padding: 17px 30px;
   color: #FFFFFF;
   background: #0051F9;
-}/*# sourceMappingURL=header.css.map */
+}
+@media screen and (max-width:768px) {
+  .nav-link.active::before {
+   display: none;
+  }
+  .navbar-toggler {
+    
+    line-height: 1;
+    color:transparent;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    transition: var(--bs-navbar-toggler-transition);
+}
+.navbar-nav {
+padding-left: 35px;
+margin: 30px 0;
+}
+
+  
+}
+
+/*# sourceMappingURL=header.css.map */

@@ -1,6 +1,8 @@
 import React,{useState} from 'react';
 
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+// import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+
 import {  useNavigate  } from 'react-router-dom';
 import { setUser } from '../store/slices/userSlice';
 import Header from './SignUpPages/components/Header'
@@ -18,7 +20,7 @@ const LoginPage: React.FC = () => {
 
     const handle = () => {
         handleLogin(email, password);
-      };
+    };
 
     const handleLogin = (email:string, password:string)=>{
         const auth = getAuth();
@@ -32,8 +34,26 @@ const LoginPage: React.FC = () => {
             }))
             navigate('/');
           })
-          .catch(console.error)
+          .catch(error => {
+            console.error("Error during sign-in:", error.code, error.message);
+          });
         }
+        const handleGoogleSignIn = () => {
+          const auth = getAuth();
+          const provider = new GoogleAuthProvider();
+          signInWithPopup(auth, provider)
+            .then((result) => {
+              const user = result.user;
+              console.log(user);
+              dispatch(setUser({
+                email: user.email,
+                id: user.uid,
+                token: user.refreshToken,
+              }));
+              navigate('/');
+            })
+            .catch(console.error);
+        };
     
 return (
 <>
@@ -61,6 +81,7 @@ return (
         <p>Forgot password</p>
         <div className="button-container">
             <button onClick={handle}>Log in</button>
+            <button onClick={handleGoogleSignIn}>Log in with Google</button>
         </div>
 
     </div>
