@@ -13,7 +13,7 @@ const Header: React.FC<HeaderProps> = ({ linkColor = 'default-color' }) => {
   
   const currentLogo = location.pathname === '/' ? logoLight : logo;
   return (
-    <header>
+    <header data-testid="header">
       <Navbar expand="lg">
         <Container>
           <Navbar.Brand href="#">

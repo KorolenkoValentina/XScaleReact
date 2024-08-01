@@ -11,7 +11,11 @@ interface Step2Props {
 }
 
 const Step2: React.FC<Step2Props> = ({ nextStep, prevStep, handleInputChange, formData  }) => {
- 
+  const validateForm = () => {
+    return formData.password &&
+           formData.repeatPassword &&
+           formData.password === formData.repeatPassword;
+  };
   return (
   <>
      <Header 
@@ -25,20 +29,23 @@ const Step2: React.FC<Step2Props> = ({ nextStep, prevStep, handleInputChange, fo
       <p>Step 2. Create a password</p>
       <StepProgress currentStep={2} totalSteps={3} />
       <div>
-        <label>Password*</label>
-        <input type="password" required 
+        <label htmlFor="password">Password*</label>
+        <input    id="password"
+        data-testid="password-input"
         name="password"
-        value={formData.password} onChange={handleInputChange}/>
+        type="password"
+        value={formData.password}
+        onChange={handleInputChange}/>
       </div>
       <div>
         <label>Repeat password*</label>
-        <input type="password" required 
-        name="password"
+        <input  id="repeatPassword" type="password" required 
+        name="repeatPassword"
         value={formData.repeatPassword} onChange={handleInputChange}/>
       </div>
       <div className='btn-container'>
       <button className='btn-back' onClick={prevStep}>Back</button>
-      <button onClick={nextStep}>Continue</button>
+      <button onClick={nextStep} disabled={!validateForm()}>Continue</button>
       </div>
     </div>
   </>

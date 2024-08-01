@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import photo from '../assets/images/about/foto.jpg'
@@ -30,14 +31,14 @@ return (
                 </div>
             </div>
             <div className="examples">
-                <div className="example">
+                <div className="example" data-testid="example">
                     <p className="subtitle">
                         At XSCALE we aim to achieve an efficient synergy of a broad scope of international freight
                         providers and carriers to ensure our clients receive the fastest possible transit times, at
                         competitive rates.
                     </p>
                 </div>
-                <div className="example example-transportation">
+                <div className="example example-transportation" data-testid="example">
                     <p className="subtitle">
                         Powered by innovative solutions, we offer a full suite of logistics services including, road,
                         sea and air freight, plus warehousing, pack / unpack, break bulk and more. We’re truly an end to
@@ -45,7 +46,7 @@ return (
                         effectively as possible.
                     </p>
                 </div>
-                <div className="example example-service">
+                <div className="example example-service" data-testid="example">
                     <p className="subtitle">
                         We put a great emphasis on service through instant quotations, minimum cut-off/connection times,
                         all-time operations control and visibility in the first/last miles of your shipment.

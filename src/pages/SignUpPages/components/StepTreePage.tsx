@@ -31,8 +31,8 @@ const Step3: React.FC<Step3Props> = ({prevStep, submitForm, handleInputChange, f
       <StepProgress currentStep={3} totalSteps={3} />
       <div className="name-container">
         <div>
-          <label>Name of the company*</label>
-          <input type="text" required 
+          <label htmlFor="companyName">Name of the company*</label>
+          <input  id="companyName" type="text" required 
           name="companyName"
           value={formData.companyName}
           onChange={handleInputChange}/>
@@ -51,8 +51,8 @@ const Step3: React.FC<Step3Props> = ({prevStep, submitForm, handleInputChange, f
         value={formData.additionalPhone} onChange={handleInputChange}/>
       </div>
       <div>
-        <label>Company jurisdiction*</label>
-        <input type="text" required 
+        <label htmlFor="jurisdiction">Company jurisdiction*</label>
+        <input id="jurisdiction" type="text" required 
         name="jurisdiction"
         value={formData.jurisdiction} onChange={handleInputChange}/>
       </div>

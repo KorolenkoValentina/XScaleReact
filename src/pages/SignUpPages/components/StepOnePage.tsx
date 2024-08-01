@@ -14,6 +14,11 @@ const Step1: React.FC<Step1Props> = ({ nextStep, handleInputChange, formData  })
   // const[lastName, setLastName]= useState('')
   // const[number, setNumber]= useState('')
   // const[email, setEmail]= useState('')
+
+  const validateForm = () => {
+    return formData.firstName && formData.lastName && formData.phoneNumber && formData.email && formData.email.includes('@');
+  };
+
   return (
   <>
      <Header 
@@ -28,29 +33,32 @@ const Step1: React.FC<Step1Props> = ({ nextStep, handleInputChange, formData  })
       <StepProgress currentStep={1} totalSteps={3} />
       <div className="name-container">
         <div>
-          <label>First Name*</label>
-          <input type="text" required 
+          <label htmlFor="firstName">First Name*</label>
+          <input id="firstName" type="text" required 
           name="firstName" 
           value={formData.firstName} onChange={handleInputChange}/>
         </div>
         <div>
           <label>Last Name*</label>
-          <input type="text" required 
+          <input  id="lastName" type="text" required 
            name="lastName"
           value={formData.lastName} onChange={handleInputChange}/>
         </div>
       </div>
       <div>
         <label>Phone number*</label>
-        <input type="text" required 
+        <input   id="phoneNumber" type="text" required 
         name="phoneNumber" 
         value={formData.phoneNumber} onChange={handleInputChange}/>
       </div>
       <div>
-        <label>Email*</label>
-        <input type="email" required 
-         name="email"
-         value={formData.email} onChange={handleInputChange}/>
+        <label htmlFor="email">Email*</label>
+        <input  id="email"
+          name="email"
+          required
+          type="email"
+          value={formData.email}
+          onChange={handleInputChange}/>
       </div>
 
       <div className='checkbox-container'>
@@ -58,7 +66,7 @@ const Step1: React.FC<Step1Props> = ({ nextStep, handleInputChange, formData  })
         <label>I agree to the Privacy Policy</label>
       </div>
       <div className="button-container">
-          <button onClick={nextStep}>Continue</button>
+          <button onClick={nextStep} disabled={!validateForm()}>Continue</button>
         </div>
 
     </div>

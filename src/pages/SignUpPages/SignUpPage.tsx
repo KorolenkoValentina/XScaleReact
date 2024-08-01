@@ -19,6 +19,7 @@ const SignUpPage: React.FC = () => {
     phoneNumber: '',
     email: '',
     password: '',
+    repeatPassword: '',
     companyName: '',
     businessNature: '',
     additionalPhone: '',
